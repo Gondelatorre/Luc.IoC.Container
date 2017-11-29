@@ -8,7 +8,7 @@ namespace LucMx.IOC.Test
 {
     public  static class ConfigureContainer
     {
-        public static LucIOCContainer Configure(this LucIOCContainer container)
+        public static LucIocContainer Configure(this LucIocContainer container)
         {
             container.Register<IMamifero, Mamifero>();
             container.Register<IPerro, Perro>();

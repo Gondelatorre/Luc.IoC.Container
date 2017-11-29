@@ -3,12 +3,18 @@ using System.Collections.Generic;
 
 namespace LucMx.IOC
 {
-    public class LucIOCContainer
+    public class LucIocContainer
     {
+        public static LucIocContainer GetNewContainer()
+        {
+            return new LucIocContainer();
+        }
+
+
         private Dictionary<Type, Type> _config;
 
 
-        public LucIOCContainer()
+        public LucIocContainer()
         {
             _config =new Dictionary<Type, Type>();
         }
@@ -32,7 +38,7 @@ namespace LucMx.IOC
             
         }
 
-
+        #region private methods
         private  object CCreateInstante(Type cType, List<Type> avoidListType)
         {
             var tipo = GetType(cType);
@@ -78,6 +84,6 @@ namespace LucMx.IOC
                 throw new Exception("Problema de referencia ciclica");
             }
         }
-
+        #endregion
     }
 }

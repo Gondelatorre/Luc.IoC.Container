@@ -14,7 +14,7 @@ namespace LucMx.IOC.Test
         {
             try
             {
-                LucIOCContainer container = new LucIOCContainer();
+                LucIocContainer container = new LucIocContainer();
 
                 Configure(container);
 
@@ -34,7 +34,7 @@ namespace LucMx.IOC.Test
 
         }
 
-        static void Configure( LucIOCContainer container)
+        static void Configure( LucIocContainer container)
         {
             container.Register<IMamifero, Mamifero>();
             container.Register<IPerro, Perro>();
